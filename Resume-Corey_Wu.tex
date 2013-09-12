@@ -1,0 +1,119 @@
+\documentclass[11pt, letterpaper, oneside]{article}
+
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[dvipsnames]{color}
+\usepackage{baskervald}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{enumitem}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\voffset}{0.1in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{11in}
+\setlength{\textheight}{9.5in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\textwidth}{7in}
+\setlength{\topskip}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+
+\pagestyle{empty}
+
+% Name and contact information
+\newcommand{\name}{Corey Wu}
+\newcommand{\program}{2A Computer Engineering}
+\newcommand{\website}{http://www.coreywu.com}
+\newcommand{\phone}{(647) 502-9912}
+\newcommand{\email}{c69wu@uwaterloo.ca}
+
+% A horizontal rule for sections
+\newcommand{\HRule}[2]{\textcolor{#1}{\rule{\linewidth}{#2}}}
+ 
+% A section tile command
+\newcommand{\sectiontitle}[1]{\begin{minipage}{\textwidth}\vspace{-10pt}\begin{flushleft}\hspace{-20pt}\vspace{-25pt}
+\Large\MakeUppercase{#1}\end{flushleft}\end{minipage}\\\HRule{black}{0.15mm}\vspace{\baselineskip}}
+
+% An environment for a resume section
+\newenvironment{ressection}[1]{
+  \sectiontitle{#1}}
+  {\vspace{-\baselineskip}}
+  
+% Resentry defines a position
+% Arg1: Position title
+% Arg2: Company or Office---Company
+% Arg3: Location, PROV
+% Arg4: Date Range
+\newcommand{\resentryheader}[4]{
+    \vspace{-5pt}
+    \textbf{#1}\hspace{\stretch{1}}\textcolor{black}{#3}\\
+    \textit{#2}\hspace{\stretch{1}}\textcolor{black}{#4}\\
+}
+ 
+% A resitem is a simple list element
+\newcommand{\resitem}[1]{
+    \vspace{2pt}
+    \item \begin{flushleft} #1 \end{flushleft}
+}
+
+\newcommand{\resinneritem}[1]{
+	\vspace{-5pt}
+    \item \begin{flushleft} #1 \end{flushleft}
+}
+
+% This is a resume entry with a header and bullet items
+\newenvironment{resentry}[4]{
+  \begin{minipage}{\textwidth}
+    \resentryheader{#1}{#2}{#3}{#4}
+        \vspace{-\baselineskip}
+    \begin{itemize}[noitemsep,nolistsep]
+}{
+    \end{itemize}
+        \vspace{\baselineskip}
+        \end{minipage}
+}
+
+\begin{document}
+
+\begin{ressection}{Experience}
+  \begin{resentry}{Test Automation Developer}{Polar Inc. (formerly Polar Mobile)}{Toronto, ON}{Apr. 2013 -- Aug. 2013}
+    \resitem{Designed automated testing architecture using Buildbot to automatically run tests written in Java.}
+    \resitem{Helped company achieve continuous deployment by setting continuous integration using Buildbot, reducing cycle time significantly.}
+    \vspace{4pt} \hspace{-15pt}
+    \textbf{Key Technologies:} Java, JUnit, Eclipse, Selenium, Buildbot.
+  \end{resentry}
+  
+\end{ressection}
+
+\begin{ressection}{Projects}
+  \begin{resentry}{UW Food Menu}{Waterloo Food Services Android App}{}{Mar. 2013 -- Present}
+    \resitem{Designed a parser to asynchronously retrieve and parse JSON data from the Waterloo API into data to be displayed in app.}
+    \resitem{Integrated with Google Maps API to display location data.}
+    \resitem{Created intuitive UI using popular Android design patterns.}
+    \resitem{Implemented Python and PHP scripts to parse API data and store in a MySQL or SQLite database.}
+    \vspace{4pt} \hspace{-15pt}
+    \textbf{Key Technologies:} Java, Eclipse, Python, PHP, MySQL.
+  \end{resentry}
+\end{ressection}
+
+\begin{ressection}{Education}
+  \begin{resentry}{Candidate for Bachelor of Applied Science}{University of Waterloo)}{Waterloo, ON}{Sept. 2012 -- Present}
+    \resitem{\textbf{Relevant Projects}}
+	\textbf{Android Map Navigation App}   
+    \begin{itemize}
+		\resinneritem{Designed an Android application to algorithmically navigate a user past obstacles to a chosen destination using an SVG map.}
+		\resinneritem{Implemented constant polling from magnetic field and gyroscope sensors to determine the user's position and orientation.}
+		\resinneritem{Created a finite state machine to determine user's movements.}
+		
+	\end{itemize}
+  \end{resentry}
+\end{ressection}
+
+\end{document}
