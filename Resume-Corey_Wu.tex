@@ -68,6 +68,16 @@
     \item \begin{flushleft} #1 \end{flushleft}
 }
 
+\newcommand{\resawardentry}[3]{
+  \begin{minipage}{\textwidth}
+  \vspace{-8pt}
+  \textbf{#1},
+  {#2}\hfill\textcolor{black}{#3}\\
+  \vspace{-5pt}
+  \vspace{0.5\baselineskip}
+  \end{minipage}
+}
+
 % This is a resume entry with a header and bullet items
 \newenvironment{resentry}[4]{
   \begin{minipage}{\textwidth}
@@ -87,19 +97,18 @@
     \resitem{Designed automated testing architecture using Buildbot to automatically run tests written in Java.}
     \resitem{Helped company achieve continuous deployment by setting continuous integration using Buildbot, reducing cycle time significantly.}
     \vspace{4pt} \hspace{-15pt}
-    \textbf{Key Technologies:} Java, JUnit, Eclipse, Selenium, Buildbot.
+    \textbf{Key Technologies:} Java, JUnit, Eclipse, Selenium, Bash, Buildbot.
   \end{resentry}
-  
 \end{ressection}
 
 \begin{ressection}{Projects}
   \begin{resentry}{UW Food Menu}{Waterloo Food Services Android App}{}{Mar. 2013 -- Present}
     \resitem{Designed a parser to asynchronously retrieve and parse JSON data from the Waterloo API into data to be displayed in app.}
     \resitem{Integrated with Google Maps API to display location data.}
-    \resitem{Created intuitive UI using popular Android design patterns.}
     \resitem{Implemented Python and PHP scripts to parse API data and store in a MySQL or SQLite database.}
+    \resitem{Used Git for version control and implemented an iterative work flow.}
     \vspace{4pt} \hspace{-15pt}
-    \textbf{Key Technologies:} Java, Eclipse, Python, PHP, MySQL.
+    \textbf{Key Technologies:} Java, Eclipse, Python, PHP, MySQL, Git.
   \end{resentry}
 \end{ressection}
 
@@ -114,6 +123,11 @@
 		
 	\end{itemize}
   \end{resentry}
+\end{ressection}
+
+\begin{ressection}{Awards}
+  	\resawardentry{Dean's Honour List}{University of Waterloo}{Mar. 2013 \& June 2013}
+  	\resawardentry{Whatever the award for being number 1 was}{University of Waterloo}{June 2013}
 \end{ressection}
 
 \end{document}
