@@ -44,9 +44,9 @@
 
 % An environment for a resume section
 \newenvironment{ressection}[1]{
-  \vspace{7pt}
   \sectiontitle{#1}}
   {\vspace{-\baselineskip}}
+  \vspace{8pt}
   
 % Resentry defines a position
 % Arg1: Position title
@@ -54,7 +54,7 @@
 % Arg3: Location, PROV
 % Arg4: Date Range
 \newcommand{\resentryheader}[4]{
-    \vspace{-5pt}
+    \vspace{-6pt}
     \textbf{#1}\hspace{\stretch{1}}\textcolor{black}{#3}\\
     \textit{#2}\hspace{\stretch{1}}\textcolor{black}{#4}\\
 }
@@ -109,8 +109,8 @@
 
 \begin{ressection}{Skills Summary}
 \begin{itemize}
-\vspace{-8pt}
-\resskillsitem{Languages}{Java, Python, C\#, C++, PHP, MySQL, HTML, CSS}
+\vspace{-6.5pt}
+\resskillsitem{Languages}{Java, Python, C\#, C++, Assembly, PHP, MySQL, HTML, CSS}
 \resskillsitem{APIs/Tools}{Eclipse, Android, JUnit, Git, Selenium Browser Automation, Sauce Labs, Buildbot}
 \resskillsitem{Systems}{Windows, Linux (Crunchbang), Mac}
 \end{itemize}
@@ -131,7 +131,7 @@
     \resitem{Designed a parser to asynchronously request and parse JSON data from the University of Waterloo API into data to be displayed in app.}
     \resitem{Integrated with Google Maps API to display location data and operational hours of eateries.}
     \resitem{Implemented Python and PHP scripts to parse API data and store in a MySQL or SQLite database.}
-    \resitem{Used Git for version control and implemented a feature branch workflow with issue tracking.}
+    \resitem{Collaborated in a team of three using Git for version control by implementing a feature branch workflow with issue tracking.}
     \vspace{4pt} \hspace{-15pt}
     \textbf{Key Technologies:} Java, Eclipse, Python, PHP, MySQL, Git.
   \end{resentry}
