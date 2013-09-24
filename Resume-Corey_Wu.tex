@@ -8,6 +8,7 @@
 \usepackage{tabularx}
 \usepackage{multicol}
 \usepackage{enumitem}
+\usepackage{hyperref}
 
 %-----------------------------------------------------------
 %Margin setup
@@ -31,7 +32,7 @@
 \newcommand{\name}{Corey Wu}
 \newcommand{\program}{2A Computer Engineering}
 \newcommand{\website}{http://www.coreywu.com}
-\newcommand{\github}{https://github.com/coreywu}
+\newcommand{\github}{\href{https://github.com/coreywu}{https://github.com/coreywu}}
 \newcommand{\phone}{(647) 502-9912}
 \newcommand{\email}{c69wu@uwaterloo.ca}
 
@@ -117,7 +118,7 @@
 \end{ressection}
 
 \begin{ressection}{Experience}
-  \begin{resentry}{Test Automation Developer}{Polar (formerly Polar Mobile)}{Toronto, ON}{Apr. 2013 -- Aug. 2013}
+  \begin{resentry}{Test Automation Developer}{\href{http://polar.me/}{Polar} (formerly Polar Mobile)}{Toronto, ON}{Apr. 2013 -- Aug. 2013}
     \resitem{Designed automated testing architecture using Buildbot to automatically run tests written in Java.}
     \resitem{Helped company achieve continuous deployment by through continuous integration using Buildbot, reducing release cycle time significantly.}
     \resitem{Developed and executed Selenium test cases in Java using the JUnit framework to thoroughly test mobile and web applications with multiple browsers in parallel.}
@@ -127,11 +128,11 @@
 \end{ressection}
 
 \begin{ressection}{Projects}
-  \begin{resentry}{UW Food Menu}{Waterloo Food Services Android App}{}{Mar. 2013 -- Present}
+  \begin{resentry}{\href{https://play.google.com/store/apps/details?id=ca.uwaterloo.uwfoodservices&hl=en}{UW Food Menu}}{Waterloo Food Services Android App}{}{Mar. 2013 -- Present}
     \resitem{Designed a parser to asynchronously request and parse JSON data from the University of Waterloo API into data to be displayed in app.}
     \resitem{Integrated with Google Maps API to display location data and operational hours of eateries.}
     \resitem{Implemented Python and PHP scripts to parse API data and store in a MySQL or SQLite database.}
-    \resitem{Collaborated in a team of three using Git for version control by implementing a feature branch workflow with issue tracking.}
+    \resitem{Collaborated in a team of three using \href{https://github.com/shamak/FoodMenuUW/tree/DEV_1.2}{Git for version control} by implementing a feature branch workflow with issue tracking.}
     \vspace{4pt} \hspace{-15pt}
     \textbf{Key Technologies:} Java, Eclipse, Python, PHP, MySQL, Git.
   \end{resentry}
