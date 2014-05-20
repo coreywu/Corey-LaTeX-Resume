@@ -30,9 +30,9 @@
 
 % Name and contact information
 \newcommand{\name}{Corey Wu}
-\newcommand{\program}{2A Computer Engineering}
+\newcommand{\program}{2B Computer Engineering}
 \newcommand{\website}{http://www.coreywu.com}
-\newcommand{\github}{\href{https://github.com/coreywu}{https://github.com/coreywu}}
+\newcommand{\github}{\href{https://github.com/coreywu}{github.com/coreywu}}
 \newcommand{\phone}{(647) 502-9912}
 \newcommand{\email}{c69wu@uwaterloo.ca}
 
@@ -47,7 +47,6 @@
 \newenvironment{ressection}[1]{
   \sectiontitle{#1}}
   {\vspace{-\baselineskip}}
-  \vspace{8pt}
   
 % Resentry defines a position
 % Arg1: Position title
@@ -89,6 +88,7 @@
 % This is a resume entry with a header and bullet items
 \newenvironment{resentry}[4]{
   \begin{minipage}{\textwidth}
+  \vspace{-3pt}
     \resentryheader{#1}{#2}{#3}{#4}
         \vspace{-\baselineskip}
     \begin{itemize}[noitemsep,nolistsep]
@@ -100,61 +100,60 @@
 
 \begin{document}
 \begin{center}
-{\Huge \textbf{\name}}
+	{\Huge \textbf{\name}}
 
-\ \ {\Large{\program}} \\
-\ \ \github \ \textbullet \ \email \ \
+	\ \ {\Large{\program}} \\
+	\ \ \github \ \textbullet \ \email \ \
 \end{center}
 
-\vspace{-10pt}
+\vspace{-20pt}
 
 \begin{ressection}{Skills Summary}
-\begin{itemize}
-\vspace{-6.5pt}
-\resskillsitem{Languages}{Java, Python, C\#, C++, Assembly, PHP, MySQL, HTML, CSS, MATLAB}
-\resskillsitem{APIs/Tools}{Eclipse, Android, JUnit, Git, Vim, Selenium Browser Automation, Sauce Labs, Buildbot}
-\resskillsitem{Systems}{Windows, Linux (Crunchbang), Mac}
-\end{itemize}
+\begin{resentry}{Languages:}{}{}{}{}
+\vspace{-16pt}
+\resitem{\textbf{Experienced with:} Java, Python \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textbullet \ \textbf{Familiar with:} C, C++, C\# Assembly, PHP, BASH, MATLAB}
+\vspace{-10pt}
+\end{resentry}
+\textbf{Tools \& Technologies:} Eclipse, Android, JUnit, Vagrant, Amazon EC2, Git, Vim, MySQL
 \end{ressection}
+\vspace{14pt}
 
 \begin{ressection}{Experience}
-  \begin{resentry}{Test Automation Developer}{\href{http://polar.me/}{Polar} (formerly Polar Mobile)}{Toronto, ON}{Apr. 2013 -- Aug. 2013}
-    \resitem{Designed automated testing architecture using Buildbot to automatically run tests written in Java.}
-    \resitem{Helped company achieve continuous deployment by through continuous integration using Buildbot, reducing release cycle time significantly.}
-    \resitem{Developed and executed Selenium test cases in Java using the JUnit framework to thoroughly test mobile and web applications with multiple browsers in parallel.}
+  \begin{resentry}{Software Intern}{\href{http://www.seeq.com/}{Seeq Inc.}}{Hood River, OR}{Jan. 2014 -- Apr. 2014}
+    \resitem{Gained experience with graph databases and big data technology.}
+    \resitem{Developed a cloud-based integration test architecture to perform tests on virtual machines using Vagrant and Amazon EC2 instances.}
+    \resitem{Developed a process supervisor to start component processes and integrate them into a product. }
     \vspace{4pt} \hspace{-15pt}
-    \textbf{Key Technologies:} Java, JUnit, Eclipse, Selenium, Bash, Buildbot.
+    \textbf{Key Technologies:} Java, Cassandra, Titan, Vagrant, Amazon EC2, Python.
+  \end{resentry}
+  \begin{resentry}{Test Automation Developer}{\href{http://polar.me/}{Polar} (formerly Polar Mobile)}{Toronto, ON}{Apr. 2013 -- Aug. 2013}
+    \resitem{Helped team achieve continuous deployment through continuous integration using Buildbot, reducing release cycle time significantly.}
+    \resitem{Developed and executed Selenium test cases in Java using the JUnit framework to thoroughly test mobile and web applications in multiple browsers.}
+    \vspace{4pt} \hspace{-15pt}
+    \textbf{Key Technologies:} Java, JUnit, Eclipse, Selenium, Buildbot.
   \end{resentry}
 \end{ressection}
 
 \begin{ressection}{Projects}
   \begin{resentry}{\href{https://play.google.com/store/apps/details?id=ca.uwaterloo.uwfoodservices&hl=en}{UW Food Menu}}{Waterloo Food Services Android App}{}{Mar. 2013 -- Present}
-    \resitem{Designed a parser to asynchronously request and parse JSON data from the University of Waterloo API into data to be displayed in app; data is fetched weekly and cached for future use.}
-    \resitem{Integrated with Google Maps API to display location data and operational hours of eateries.}
+    \resitem{Designed a parser to asynchronously request and parse JSON from the University of Waterloo API and display in app; data is fetched weekly and cached for future use.}
+    \resitem{Integrated with Google Maps API to display a map of eateries.}
     \resitem{Implemented Python and PHP scripts to parse API data and store in a MySQL or SQLite database.}
-    \resitem{Collaborated in a team of three using \href{https://github.com/shamak/FoodMenuUW/tree/DEV_1.2}{Git for version control} by implementing a feature branch workflow with issue tracking.}
     \vspace{4pt} \hspace{-15pt}
-    \textbf{Key Technologies:} Java, Eclipse, Python, PHP, MySQL, Git.
+    \textbf{Key Technologies:} Java, Android, Eclipse, Python, PHP, MySQL, Git.
   \end{resentry}
 \end{ressection}
 
 \begin{ressection}{Education}
   \begin{resentry}{Candidate for Bachelor of Applied Science}{University of Waterloo}{Waterloo, ON}{Sept. 2012 -- Present}
     \resitem{\textbf{Relevant Projects}}
-	\textbf{\hspace{5pt} Android Map Navigation App}   
+	\textbf{\hspace{5pt}Map Navigation Android App}   
     \begin{itemize}
-		\resinneritem{Designed an Android application to algorithmically navigate a user past obstacles to a chosen destination using an SVG map.}
-		\resinneritem{Implemented constant polling from magnetic field and gyroscope sensors to determine the user's position and orientation.}
-		\resinneritem{Created a finite state machine to determine user's movements.}
+		\resinneritem{Designed an Android application to algorithmically navigate a user past obstacles to a chosen destination on a map using magnetic field and gyroscope sensor inputs.}
 	\end{itemize}
 	\resitem{\textbf{Awards}}
 	\begin{itemize}
-	\resawardentry{\hspace{5pt} Faculty of Engineering Upper-Year Scholarship}{University of Waterloo}{June 2013}
-		\begin{itemize}
-  	\vspace{-10pt}
-  		\resinneritem{Awarded to the top student in each class based on academic performance.}
-  	\end{itemize}
-  	\resawardentry{\hspace{5pt} Dean's Honour List}{University of Waterloo}{Mar. 2013 \& June 2013}
+  	\resawardentry{\hspace{5pt} Dean's Honour List}{University of Waterloo}{Mar. 2014}
 	\end{itemize}
   \end{resentry}
 \end{ressection}
