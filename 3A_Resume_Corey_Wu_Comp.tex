@@ -1,0 +1,171 @@
+\documentclass[11pt, letterpaper, oneside]{article}
+
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[dvipsnames]{color}
+\usepackage{baskervald}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\voffset}{0.1in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\paperheight}{11in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\textheight}{11in}
+\setlength{\textheight}{9.5in}
+\setlength{\topmargin}{-0.25in}
+\setlength{\textwidth}{7in}
+\setlength{\topskip}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+
+\pagestyle{empty}
+
+% Name and contact information
+\newcommand{\name}{Corey Wu}
+\newcommand{\program}{3A Computer Engineering}
+\newcommand{\website}{http://www.coreywu.com}
+\newcommand{\github}{\href{https://github.com/coreywu}{github.com/coreywu}}
+\newcommand{\phone}{(647) 502-9912}
+\newcommand{\email}{c69wu@uwaterloo.ca}
+
+% A horizontal rule for sections
+\newcommand{\HRule}[2]{\textcolor{#1}{\rule{\linewidth}{#2}}}
+ 
+% A section tile command
+\newcommand{\sectiontitle}[1]{\begin{minipage}{\textwidth}\vspace{-7.5pt}\begin{flushleft}\hspace{-20.5pt}\vspace{-25pt}
+\Large\MakeUppercase{#1}\end{flushleft}\end{minipage}\\\HRule{black}{0.15mm}\vspace{\baselineskip}}
+
+% An environment for a resume section
+\newenvironment{ressection}[1]{
+  \sectiontitle{#1}}
+  {\vspace{-\baselineskip}}
+  
+% Resentry defines a position
+% Arg1: Position title
+% Arg2: Company or Office---Company
+% Arg3: Location, PROV
+% Arg4: Date Range
+\newcommand{\resentryheader}[4]{
+    \vspace{-6pt}
+    \textbf{#1}\hspace{\stretch{1}}\textcolor{black}{#3}\\
+    \textit{#2}\hspace{\stretch{1}}\textcolor{black}{#4}\\
+}
+ 
+% A resitem is a simple list element
+\newcommand{\resitem}[1]{
+    \vspace{2pt}
+    \item \begin{flushleft} #1 \end{flushleft}
+}
+
+\newcommand{\resinneritem}[1]{
+	\vspace{-5pt}
+    \item \begin{flushleft} #1 \end{flushleft}
+}
+
+\newcommand{\resskillsitem}[2]{
+	\vspace{-12pt}
+    \item \begin{flushleft} \textbf{#1}: #2 \end{flushleft}
+    \vspace{4pt}
+}
+
+\newcommand{\resawardentry}[3]{
+  \begin{minipage}{6.3in}
+  \hspace{-24pt}\textbf{#1},
+  {#2}\hfill\textcolor{black}{#3}\\
+  \vspace{-5pt}
+  \vspace{0.5\baselineskip}
+  \end{minipage}
+}
+
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% This is a resume entry with a header and bullet items
+\newenvironment{resentry}[4]{
+  \begin{minipage}{\textwidth}
+  \vspace{-3pt}
+    \resentryheader{#1}{#2}{#3}{#4}
+        \vspace{-\baselineskip}
+    \begin{itemize}[noitemsep,nolistsep]
+}{
+    \end{itemize}
+        \vspace{\baselineskip}
+        \end{minipage}
+}
+
+\begin{document}
+\begin{center}
+	{\Huge \textbf{\name}}
+
+	\ \ {\Large{\program}} \\
+	\ \ \github \ \textbullet \ \email \ \
+\end{center}
+
+\vspace{-20pt}
+
+\begin{ressection}{Skills Summary}
+\begin{resentry}{Languages:}{}{}{}{}
+\vspace{-16pt}
+\resitem{\textbf{Experienced with:} Java, Python \ \ \ \ \textbullet \ \textbf{Familiar with:} C, \CPP, C\#, Assembly, JavaScript, PHP, Bash, VHDL}
+\vspace{-10pt}
+\end{resentry}
+\textbf{Technologies:} PostgreSQL, MySQL, SQLite, Amazon EC2, Vagrant, VirtualBox,  \LaTeX
+\\
+\textbf{Tools:} Git, Eclipse, Android Studio, Vim
+\end{ressection}
+\vspace{14pt}
+
+\begin{ressection}{Experience}
+  \begin{resentry}{\href{http://pos.toasttab.com/}{Toast Inc.}}{Software Engineer Intern}{Boston, MA}{Aug. 2014 -- Dec. 2014}
+    \resitem{Developed features and bug fixes for Android app and Java Play webserver.}
+    \resitem{Designed and implemented data models and JSON serializing/deserializing logic for new Customer Relationship Management component; wrote scripts for database migrations. }
+    \vspace{4pt} \hspace{-15pt}
+    \textbf{Key Technologies:} Java, Android, PostgreSQL, Play Framework, JavaScript, Heroku, Hibernate.
+  \end{resentry}  
+  \begin{resentry}{\href{http://www.seeq.com/}{Seeq}}{Software Engineer Intern}{Seattle, WA}{Jan. 2014 -- Apr. 2014}
+    \resitem{Implemented features for monitoring and configuration of server application. }
+    \resitem{Developed cloud-based test architecture to perform tests on Amazon EC2 VMs using Vagrant.}
+    \resitem{Worked with graph databases (Titan \& Neo4j) and big data technology.}
+    \vspace{4pt} \hspace{-15pt}
+    \textbf{Key Technologies:} Java, Titan, Vagrant, Amazon EC2, Python.
+  \end{resentry}
+  \begin{resentry}{\href{http://polar.me/}{Polar}}{Test Automation Developer}{Toronto, ON}{Apr. 2013 -- Aug. 2013}
+    \resitem{Helped team achieve continuous deployment using Buildbot, significantly reducing release cycle time.}
+    \vspace{4pt} \hspace{-15pt}
+    \textbf{Key Technologies:} Java, JUnit, Eclipse, Selenium, Buildbot.
+  \end{resentry}
+\end{ressection}
+
+\begin{ressection}{Projects}
+  \begin{resentry}{\href{https://github.com/shamak/HTN_Scheduler}{Calendr}}{Event Scheduling Android App}{}{Oct. 2014 -- Present}
+    \resitem{Created an event scheduling Android app using Google Calendar and Contact APIs.}
+    \resitem{Implemented algorithm for selecting optimal event times based on participants' schedules.}
+    \vspace{4pt} \hspace{-15pt}
+    \textbf{Key Technologies:} Java, Android, PHP, MySQL.
+  \end{resentry}
+  \begin{resentry}{\href{https://github.com/coreywu/Connect4}{Embedded Connect 4 Game}}{Connect 4 with AI on a Microcontroller}{}{Nov. 2014 -- Present}
+    \resitem{Built on a TI TM4C123 Microcontroller with output to an LCD display. }
+    \resitem{Implemented minimax algorithm with alpha-beta pruning for intelligent AI.}
+    \vspace{4pt} \hspace{-15pt}
+    \textbf{Key Technologies:} C, Python.
+  \end{resentry}
+  \begin{resentry}{\href{https://play.google.com/store/apps/details?id=ca.uwaterloo.uwfoodservices&hl=en}{UW Food Menu}}{Waterloo Food Services Android App}{}{Jun. 2013 -- Aug. 2013}
+    \resitem{Designed an Android app which displays food services data from the University of Waterloo API.}
+    \resitem{Implemented caching of data on device and integrated with Google Maps API.}
+    \vspace{4pt} \hspace{-15pt}
+    \textbf{Key Technologies:} Java, Android, Python, PHP, MySQL.
+  \end{resentry}
+  \textbf{Relevant Courses:} Algorithms \& Data Structures, Compilers, Operating Systems, Embedded Systems
+\end{ressection}
+
+
+
+\end{document}
