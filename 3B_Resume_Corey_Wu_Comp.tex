@@ -20,11 +20,11 @@
 \setlength{\headsep}{0in}
 \setlength{\textheight}{11in}
 \setlength{\textheight}{9.5in}
-\setlength{\topmargin}{-0.25in}
+\setlength{\topmargin}{-0.5in}
 \setlength{\textwidth}{7in}
 \setlength{\topskip}{0in}
 \setlength{\oddsidemargin}{-0.25in}
-\setlength{\evensidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.5in}
 
 \pagestyle{empty}
 
@@ -57,6 +57,11 @@
     \vspace{-6pt}
     \textbf{#1}\hspace{\stretch{1}}\textcolor{black}{#3}\\
     \textit{#2}\hspace{\stretch{1}}\textcolor{black}{#4}\\
+}
+
+\newcommand{\resprojentryheader}[2]{
+    \vspace{-6pt}
+    \textbf{#1}\hspace{\stretch{1}}\textcolor{black}{#2}\\
 }
  
 % A resitem is a simple list element
@@ -101,15 +106,30 @@
         \end{minipage}
 }
 
+% This is a project entry with a header and bullet items
+\newenvironment{resprojentry}[2]{
+  \begin{minipage}{\textwidth}
+  \vspace{-3pt}
+    \resprojentryheader{#1}{#2}
+        \vspace{-\baselineskip}
+     \vspace{-2pt}
+    \begin{itemize}[noitemsep,nolistsep]
+}{
+    \end{itemize}
+        \vspace{\baselineskip}
+        \end{minipage}
+}
+
 \begin{document}
 \begin{center}
+
 	{\Huge \textbf{\name}}
 
 	\ \ {\Large{\program}} \\
 	\ \ \github \ \textbullet \ \email \ \
 \end{center}
 
-\vspace{-20pt}
+\vspace{-10pt}
 
 \begin{ressection}{Skills Summary}
   \begin{resentry}{{Languages:}}{}{}{}
@@ -122,49 +142,53 @@
   \hspace{-20pt} \textbf{Technologies:} Apache Solr, Apache Spark, Android, ANTLR,  PostgreSQL, MySQL, Amazon EC2, Vagrant
 \end{ressection}
 
-\vspace{14pt}
+\vspace{20pt}
 
 \begin{ressection}{Experience}
   \begin{resentry}{\href{http://www.bloomberg.com/professional/}{Bloomberg L.P.}}{Software Engineering}{New York City, NY}{May. 2015 -- Aug. 2015}
     \resitem{Designed and built domain specific language component of distributed Solr analytics project using ANTLR; created a generic, extensible DSL framework to build parsers for DSLs with functional syntax.}
     \resitem{Implemented parser and executor to run Spark operations for analytics on Solr documents.}
-    \vspace{2pt} \hspace{-15pt}
+    \vspace{3pt} \hspace{-15pt}
     \textbf{Key Technologies:} Apache Solr, Apache Spark, ANTLR, Jetty.
-    \vspace{2pt} 
+    \vspace{6pt} 
   \end{resentry}  
   \begin{resentry}{\href{http://pos.toasttab.com/}{Toast Inc.}}{Software Engineer Intern}{Boston, MA}{Aug. 2014 -- Dec. 2014}
    \resitem{Designed and implemented data models and JSON serialization/deserialization logic for new Customer Relationship Management component; wrote scripts for database migrations. }
     \resitem{Developed features and bug fixes for Android application and Java Play webserver.}
-    \vspace{2pt}  \hspace{-15pt}
+    \vspace{3pt}  \hspace{-15pt}
     \textbf{Key Technologies:} Android, PostgreSQL, Play Framework, JavaScript, Heroku, Hibernate.
-	\vspace{2pt}   
+	\vspace{6pt}   
   \end{resentry}  
-  \begin{resentry}{\href{http://www.seeq.com/}{Seeq}}{Software Intern}{Seattle, WA}{Jan. 2014 -- Apr. 2014}
+  \begin{resentry}{\href{http://www.seeq.com/}{Seeq}}{Software Developer Intern}{Seattle, WA}{Jan. 2014 -- Apr. 2014}
     \resitem{Developed cloud-based integration test architecture to automatically spin up VMs and execute tests on.}
     \resitem{Implemented features for monitoring and configuration of server application}
     \resitem{Worked with graph databases (Titan \& Neo4j) and researched Big Data technology.}
-    \vspace{2pt} \hspace{-15pt}
+    \vspace{3pt} \hspace{-15pt}
     \textbf{Key Technologies:} Titan, Vagrant, Amazon EC2, Python.
-	\vspace{2pt}   
+	\vspace{6pt}   
   \end{resentry}
 \end{ressection}
 
+\vspace{4pt}
+
 \begin{ressection}{Projects}
-  \begin{resentry}{\href{https://github.com/coreywu/Connect4}{Embedded Connect 4 Game}}{Connect 4 with AI on a Microcontroller}{}{Aug. 2014 -- Present}
+  \begin{resprojentry}{\href{https://github.com/coreywu/Connect4}{Embedded Connect4 Game}}{}
     \resitem{Built Connect 4 game with AI on TI TM4C123 Microcontroller with LCD graphics display.}
     \resitem{Implemented minimax algorithm with alpha-beta pruning for fast and intelligent AI.}
     \hspace{-15pt}
-  \end{resentry}
-  \begin{resentry}{\href{https://play.google.com/store/apps/details?id=ca.uwaterloo.uwfoodservices&hl=en}{UW Food Menu}}{Waterloo Food Services Android Application}{}{Jun. 2013 -- Aug. 2013}
+  \end{resprojentry}
+  \begin{resprojentry}{\href{https://play.google.com/store/apps/details?id=ca.uwaterloo.uwfoodservices&hl=en}{UW Food Menu}}{}
     \resitem{Designed an Android application which displays food services data from the University of Waterloo API.}
     \resitem{Implemented caching of data on device and integrated with Google Maps API.}
     \vspace{2pt} \hspace{-15pt}
-    \textbf{Key Technologies:} Android, PHP, MySQL.
-	\vspace{2pt}  
-  \end{resentry}
+  \end{resprojentry}
+  \begin{resprojentry}{\href{https://github.com/coreywu/CoopStatsDataAnalysis}{UW Co-op Data Analysis}}{}
+    \resitem{Analysis of UW co-op data using Apache Spark.}
+    \resitem{Implemented graph algorithms such as PageRank and Connected Components.}
+    \vspace{2pt} \hspace{-15pt}
+    \vspace{-10pt}
+  \end{resprojentry}
+  \vspace{-10pt}
   \textbf{Relevant Courses:} Algorithms \& Data Structures, Compilers, Operating Systems, Computer Networks, Databases
 \end{ressection}
-
-
-
 \end{document}
